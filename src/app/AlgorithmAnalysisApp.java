@@ -64,4 +64,27 @@ public class AlgorithmAnalysisApp {
             if (t.fee > 50) System.out.println(t);
         }
     }
+
+    static class Client {
+        String name;
+        int risk;
+        int balance;
+
+        Client(String n, int r, int b) {
+            name = n;
+            risk = r;
+            balance = b;
+        }
+    }
+
+    // Bubble Sort ascending risk
+    public static void sortClientsBubble(List<Client> list) {
+        for (int i = 0; i < list.size()-1; i++) {
+            for (int j = 0; j < list.size()-i-1; j++) {
+                if (list.get(j).risk > list.get(j+1).risk) {
+                    Collections.swap(list,j,j+1);
+                }
+            }
+        }
+    }
 }
