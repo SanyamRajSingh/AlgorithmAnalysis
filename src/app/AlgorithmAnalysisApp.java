@@ -132,4 +132,11 @@ public class AlgorithmAnalysisApp {
         int temp=arr[i+1];arr[i+1]=arr[high];arr[high]=temp;
         return i+1;
     }
+
+    public static int linearSearch(String[] arr, String key){
+        for(int i=0;i<arr.length;i++){
+            if(arr[i].equals(key)) return i;
+        }
+        return -1;
+    }
 }
